@@ -1,0 +1,44 @@
+
+$default-font-family: "Inter", Arial, sans-serif;
+$color-content-neutral-xx-high: #2C2C31;
+$color-content-neutral-medium: #8C8C9A;
+$color-content-neutral-low: #C9C9CE;
+$color-content-danger: #DC2828;
+$color-content-warning: #A56315;
+
+$color-surface-x-high: #8C8C9A;
+$color-surface-x-low: #FFFFFF;
+$color-surface-brand: #0050FF;
+$color-surface-danger: #DC2828;
+$color-surface-danger-variant: #FFDCDC;
+$color-surface-warning: #A56315;
+$color-surface-warning-variant: #FAF1B6;
+
+$color-state-default-hover: rgba(26, 26, 26, 0.06);
+$color-state-default-focus: rgba(26, 26, 26, 0.80); 
+
+$font-label-m-family: $default-font-family;
+$font-label-m-size: 1rem;
+$font-label-m-weight: 500;
+$font-label-m-line-height: 1.375rem;
+$font-label-m-letter-spacing: 0.01rem;
+
+$font-label-s-family: $default-font-family;
+$font-label-s-size: 0.875rem;
+$font-label-s-weight: 550;
+$font-label-s-line-height: 1.0625rem;
+$font-label-s-letter-spacing: 0.01rem;
+
+$font-body-m-family: $default-font-family;
+$font-body-m-size: 1rem;
+$font-body-m-weight: 400;
+$font-body-m-line-height: 1.375rem;
+$font-body-m-letter-spacing: 0.01px;
+$font-body-m-paragraph-spacing: 1.25rem;
+$font-body-m-list-spacing: 0.375px;
+
+$radius: 12px;
+$space-xs: 8px;
+$space-s: 12px;
+$space-m: 16px;
+$space-l: 20px;

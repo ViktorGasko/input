@@ -1,0 +1,132 @@
+@use "./tokens.scss";
+
+.input {
+    width: 100%;
+    max-width: 400px;
+    & > * {
+        margin-bottom: tokens.$space-xs;
+    }
+     & > *:last-child {
+        margin-bottom: tokens.$space-l;
+     }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: tokens.$space-xs;
+
+        &-main {
+            max-width: 300px;
+            font-family: tokens.$font-label-m-family;
+            color: tokens.$color-content-neutral-xx-high;
+            font-size: tokens.$font-label-m-size;
+            font-weight: tokens.$font-label-m-weight;
+            line-height: tokens.$font-label-m-line-height;
+            letter-spacing: tokens.$font-label-m-letter-spacing;
+        }
+
+        &-desc {
+            font-family: tokens.$font-label-s-family;
+            // color of description that wasnt in content/surface colors
+            color: #7D7D8A;
+            font-size: tokens.$font-label-s-size;
+            font-weight: tokens.$font-label-s-weight;
+            line-height: tokens.$font-label-s-line-height;
+            letter-spacing: tokens.$font-label-s-letter-spacing;
+            margin: 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__field {
+        width: 100%;
+        height: 3rem;
+        font-family: tokens.$font-body-m-family;
+        color: tokens.$color-content-neutral-xx-high;
+        font-size: tokens.$font-body-m-size;
+        font-weight: tokens.$font-body-m-weight;
+        line-height: tokens.$font-body-m-line-height;
+        letter-spacing: tokens.$font-body-m-letter-spacing;
+        border-radius: tokens.$radius;
+        caret-color: tokens.$color-surface-brand;
+        border: none;
+        outline: none;
+        padding: 13px tokens.$space-xs 13px tokens.$space-m;
+        box-shadow: inset 0px 0px 0px 1px tokens.$color-surface-x-high;
+        
+        &:hover {
+            box-shadow: inset 0px 0px 0px 3px tokens.$color-state-default-hover;
+        }
+
+        &--warning {
+            box-shadow: inset 0px 0px 0px 3px tokens.$color-surface-warning !important;
+        }
+
+        &--success {
+            box-shadow: inset 0px 0px 0px 3px tokens.$color-surface-brand !important;
+        }
+
+        &--danger {
+            box-shadow: inset 0px 0px 0px 3px tokens.$color-surface-danger !important;
+        }
+
+        &:focus {
+            box-shadow: inset 0px 0px 0px 3px tokens.$color-state-default-focus !important;
+        }
+
+        &:disabled {
+            box-shadow: inset 0px 0px 0px 1px tokens.$color-surface-x-high;
+            background: tokens.$color-content-neutral-low;
+            // yeah little bit too deep
+            &::placeholder {
+                color: tokens.$color-content-neutral-medium; 
+            }
+        }
+
+        &::placeholder {
+            color: tokens.$color-content-neutral-low; 
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: tokens.$font-label-m-line-height;
+        height: tokens.$font-label-m-line-height;
+        right: tokens.$space-xs;
+        top: 50%;
+        pointer-events: none;
+        transform: translateY(-50%);
+
+        &--warning {
+            color: tokens.$color-surface-warning;
+        }
+
+        &--success {
+            color: tokens.$color-surface-brand;
+        }
+
+        &--danger {
+            color: tokens.$color-surface-danger;
+        }
+    }
+
+    &__message {
+        font-size: tokens.$font-label-s-size;
+        font-weight: tokens.$font-label-s-weight;
+        padding: tokens.$space-s;
+        margin: tokens.$space-xs 0 0 0;
+
+        &--danger {
+            color: tokens.$color-content-danger;
+            background-color: tokens.$color-surface-danger-variant;
+        }
+
+        &--warning {
+            color: tokens.$color-content-warning;
+            background-color: tokens.$color-surface-warning-variant;
+        }
+    }
+}
